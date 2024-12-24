@@ -1,0 +1,667 @@
+#editAppointmentModal > form, #editPrescriptionModal > form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#editAppointmentModal h3, #editPrescriptionModal h3 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+}
+#editAppointmentModal, #editPrescriptionModal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.doctorDashboard-container {
+ width: 100%;
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 20px;
+ font-family: 'Courier New', Courier, monospace;
+ display: flex;
+ flex-direction: column; 
+ justify-content: center; 
+ align-items: center; 
+ min-height: 100vh;
+ background-image: url('doctor.jpg');
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat; 
+ color:#5a0909;
+}
+body.dashboard-body{
+  width: 100%; 
+  margin: 0; 
+}
+
+.dashboard-container{
+ width: 100%;
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 20px;
+ font-family: 'Courier New', Courier, monospace;
+ display: flex;
+ flex-direction: column; 
+ justify-content: center; 
+ align-items: center; 
+ background-image: url('interface.jpg');
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat;
+ color :#5a0909;
+}
+
+.editAppointment-container {
+  width: 40%;
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('interface.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.create-appointment-section {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 20px auto; 
+  padding: 20px; 
+  border-radius: 10px; 
+  text-align: left; 
+}
+
+.create-appointment-section h3 {
+  text-align: center; 
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #0056b3; 
+}
+
+.create-appointment-section label {
+  display: block; 
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.create-appointment-section select,
+.create-appointment-section input,
+.create-appointment-section textarea,
+.create-appointment-section button {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.create-appointment-section textarea {
+  resize: vertical; 
+  height: 100px; 
+}
+
+.create-appointment-section button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.create-appointment-section button:hover {
+  background-color: #0056b3; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-sizing: border-box; 
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: auto;
+  padding: 10px !important; 
+  margin: 0 !important;
+  font-size: 14px !important; 
+  text-align: left !important; 
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: red;
+  color: white;
+}
+td {
+  background-color: rgb(255, 255, 255);
+  width: 120px; 
+  height: 40px; 
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  display: inline-block; 
+  width: 30%; 
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 35%; 
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+
+button:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.adminDashboard-container form .form-group,
+.dashboard-container form .form-group,
+.doctorDashboard-container form .form-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.adminDashboard-container form label,
+.dashboard-container form label,
+.doctorDashboard-container form label {
+  display: inline-block;
+  width: 30%; /* Set label width */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.adminDashboard-container form input,
+.dashboard-container form input,
+.doctorDashboard-container form input,
+.adminDashboard-container form select,
+.dashboard-container form select,
+.doctorDashboard-container form select,
+.adminDashboard-container form textarea,
+.dashboard-container form textarea,
+.doctorDashboard-container form textarea {
+  width: 30%; /* Set input/select width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.add_appointment {
+  margin-top: 40px;
+}
+
+.assignPrescription-container {
+  width: 40%;
+}
+
+.create_appointment {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.admin_prescriptions {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .login-container,
+  .singUp-container,
+  .dashboard-container {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .form-group input, 
+  .form-group select, 
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+body.admin-dashboard-body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-image: url('interface.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.adminDashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #5a0909;
+  background-image: url('interface.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button[type="submit"] {
+  width: auto;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .adminDashboard-container {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form select, 
+  form textarea {
+    width: 100%;
+  }
+}
+body.login-page {
+  background-image: url('hospital.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin: 0;
+}
+
+.login-container {
+  margin-right: 35%;
+  margin-left: 35%;
+  margin-top: 8%;
+  padding: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column; 
+  box-shadow: 0 0 10px rgba(225, 225, 225, 0.2);
+  border-radius: 15px;
+  color: #0056b3; 
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(1px);  
+}
+
+
+p.healthcareSystem {
+  background-color: transparent;  
+  backdrop-filter: blur(3px);  
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;  
+  font-size: 40px; 
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; 
+  color: #ffffff
+}
+
+body.signup-page {
+  background-image: url('hospital.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+.signUp-container {
+  margin-right: 35%;
+  margin-left: 35%;
+  margin-top: 8%;
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(225, 225, 225, 0.2);
+  height: 550px;  
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;  
+  color: #0056b3;
+  background-color: transparent;
+  backdrop-filter: blur(1px);  
+}
+
+ 
+.signUp-title {
+  font-weight: bold;
+  color: #0056b3;
+  text-align: center;
+  font-size : 32px;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-container button[type="submit"],
+.singUp-container button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  font-size: 3em;
+  color: #007BFF;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.styled-table button {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.styled-table button:hover {
+  background-color: #007BFF;
+}
+
+.styled-table button[type="submit"] {
+  background-color: #007BFF;
+}
+
+.styled-table button[type="submit"]:hover {
+  background-color: #007BFF;
+}
+a.logout {
+  display: inline-block;
+  margin-top: 20px;
+  color: #d9534f;
+  font-size: 1.1em;
+  text-align: center
+}
+
+a.logout:hover {
+  text-decoration: underline;
+}
+form.logout {
+  width: 100%;
+  max-width: fit-content;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+  text-align: left;
+}
+body.user-prescriptions {
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 20px;
+ font-family: 'Courier New', Courier, monospace;
+ display: flex;
+ flex-direction: column; 
+ justify-content: center; 
+ align-items: center; 
+ background-image: url('interface.jpg');
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat;
+ color :#5a0909;
+}
+form.delete {
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+ margin: 0px;
+}
+form.doctorForm{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #000000;
+  background-image: url('doctor.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2.doctorForm{
+  font-family: 'Courier New', Courier, monospace;
+  color: #000000;
+  size: 2em;
+  text-align: center;
+}
+h1.doctorForm{
+  font-family: 'Courier New', Courier, monospace;
+  size: 3em;
+}
+body.admin_prescriptions {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background-image: url('interface.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  color :#5a0909;
+ }
+
+ body.forgot-password-page {
+  background-color: #f5f5f5;
+  background-image: url('hospital.jpg');  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.forgot-password-container {
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+.forgot-password-container h1 {
+  font-size: 2.5em;
+  color: #007BFF;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.forgot-password-container form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #007BFF;
+  text-align: left;
+}
+
+.forgot-password-container form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.forgot-password-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.forgot-password-container form button:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password-container a {
+  color: #0056b3;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.forgot-password-container a:hover {
+  text-decoration: underline;
+}
+
