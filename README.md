@@ -72,22 +72,35 @@ $dbname = "project";
 
 ## Project Structure
  project/
-├── admin_dashboard.php      # Admin dashboard for managing appointments
-├── admin_prescriptions.php  # Admin view for all prescriptions
-├── create_appointment.php   # Logic to create new appointments
-├── dashboard.php            # User dashboard for patients
-├── db_connection.php        # Database connection configuration
-├── delete_appointment.php   # Logic to delete an appointment
-├── doctor_dashboard.php     # Doctor dashboard to view appointments
-├── doctor_prescription.php  # Doctor logic for issuing prescriptions
-├── edit_appointment.php     # Logic to edit an appointment
-├── forgot_password.php      # Forgot password page for resetting credentials
-├── login.php                # Login page for all users
-├── logout.php               # Logout logic to end user sessions
-├── signup.php               # Signup page for patients and doctors
-├── style.css                # Stylesheet for UI styling
-├── user_prescriptions.php   # User view for accessing prescriptions
-└── project.sql              # SQL file to set up the database
+├── assets/
+│   ├── css/
+│   │   └── style.css        # Stylesheet for UI styling
+│   └── images/             # Placeholder for any images used in the project
+├── config/
+│   └── db_connection.php   # Database connection configuration
+├── sql/
+│   └── project.sql         # SQL file to set up the database
+├── pages/
+│   ├── admin/
+│   │   ├── dashboard.php    # Admin dashboard for managing appointments
+│   │   ├── prescriptions.php # Admin view for all prescriptions
+│   ├── doctor/
+│   │   ├── dashboard.php    # Doctor dashboard to view appointments
+│   │   ├── prescription.php # Doctor logic for issuing prescriptions
+│   ├── user/
+│   │   ├── dashboard.php    # User dashboard for patients
+│   │   ├── prescriptions.php # User view for accessing prescriptions
+│   ├── appointments/
+│   │   ├── create.php       # Logic to create new appointments
+│   │   ├── edit.php         # Logic to edit an appointment
+│   │   ├── delete.php       # Logic to delete an appointment
+│   └── auth/
+│       ├── login.php        # Login page for all users
+│       ├── logout.php       # Logout logic to end user sessions
+│       ├── signup.php       # Signup page for patients and doctors
+│       └── forgot_password.php # Forgot password page for resetting credentials
+├── index.php               # Main entry point (optional, for landing or routing)
+└── README.md               # Project description and instructions
 
 
 ## Technologies Used
