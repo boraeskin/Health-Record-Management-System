@@ -46,7 +46,7 @@ Admins can manage appointments, view all prescriptions, and oversee the overall 
    - Clone this repository or download it as a ZIP file.
 
    ```bash
-   git clone that i will enter later 
+   https://github.com/boraeskin/Health-Record-Management-System
 
 2. **Import the Database**:
 - Open your database management tool (e.g., phpMyAdmin).
@@ -69,9 +69,39 @@ $dbname = "project";
       http://localhost/project
                      
 
-
 ## Project Structure
- project/ ├── assets/ │ ├── css/ │ │ └── style.css # Stylesheet for UI styling │ └── images/ # Placeholder for any images used in the project ├── config/ │ └── db_connection.php # Database connection configuration ├── sql/ │ └── project.sql # SQL file to set up the database ├── pages/ │ ├── admin/ │ │ ├── dashboard.php # Admin dashboard for managing appointments │ │ ├── prescriptions.php # Admin view for all prescriptions │ ├── doctor/ │ │ ├── dashboard.php # Doctor dashboard to view appointments │ │ ├── prescription.php # Doctor logic for issuing prescriptions │ ├── user/ │ │ ├── dashboard.php # User dashboard for patients │ │ ├── prescriptions.php # User view for accessing prescriptions │ ├── appointments/ │ │ ├── create.php # Logic to create new appointments │ │ ├── edit.php # Logic to edit an appointment │ │ ├── delete.php # Logic to delete an appointment │ └── auth/ │ ├── login.php # Login page for all users │ ├── logout.php # Logout logic to end user sessions │ ├── signup.php # Signup page for patients and doctors │ └── forgot_password.php # Forgot password page for resetting credentials ├── index.php # Main entry point (optional, for landing or routing) └── README.md # Project description and instructions
+
+### Root Directory
+- **assets/**
+  - **css/**
+    - `style.css`: Stylesheet for UI styling
+  - **images/**: Placeholder for any images used in the project
+- **config/**
+  - `db_connection.php`: Database connection configuration
+- **sql/**
+  - `project.sql`: SQL file to set up the database
+- **pages/**
+  - **admin/**
+    - `dashboard.php`: Admin dashboard for managing appointments
+    - `prescriptions.php`: Admin view for all prescriptions
+  - **doctor/**
+    - `dashboard.php`: Doctor dashboard to view appointments
+    - `prescription.php`: Doctor logic for issuing prescriptions
+  - **user/**
+    - `dashboard.php`: User dashboard for patients
+    - `prescriptions.php`: User view for accessing prescriptions
+  - **appointments/**
+    - `create.php`: Logic to create new appointments
+    - `edit.php`: Logic to edit an appointment
+    - `delete.php`: Logic to delete an appointment
+  - **auth/**
+    - `login.php`: Login page for all users
+    - `logout.php`: Logout logic to end user sessions
+    - `signup.php`: Signup page for patients and doctors
+    - `forgot_password.php`: Forgot password page for resetting credentials
+- `index.php`: Main entry point (optional, for landing or routing)
+- `README.md`: Project description and instructions
+
 
 
 ## Technologies Used
