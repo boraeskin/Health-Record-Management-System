@@ -82,18 +82,18 @@ $dbname = "project";
   - `project.sql`: SQL file to set up the database
 - **pages/**
   - **admin/**
-    - `dashboard.php`: Admin dashboard for managing appointments
-    - `prescriptions.php`: Admin view for all prescriptions
+    - `admin_dashboard.php`: Admin dashboard for managing appointments
+    - `admin_prescriptions.php`: Admin view for all prescriptions
   - **doctor/**
-    - `dashboard.php`: Doctor dashboard to view appointments
-    - `prescription.php`: Doctor logic for issuing prescriptions
+    - `doctor_dashboard.php`: Doctor dashboard to view appointments
+    - `doctor_prescription.php`: Doctor logic for issuing prescriptions
   - **user/**
     - `dashboard.php`: User dashboard for patients
-    - `prescriptions.php`: User view for accessing prescriptions
+    - `user_prescriptions.php`: User view for accessing prescriptions
   - **appointments/**
-    - `create.php`: Logic to create new appointments
-    - `edit.php`: Logic to edit an appointment
-    - `delete.php`: Logic to delete an appointment
+    - `create_appointment.php`: Logic to create new appointments
+    - `edit_appointment.php`: Logic to edit an appointment
+    - `delete_appointment.php`: Logic to delete an appointment
   - **auth/**
     - `login.php`: Login page for all users
     - `logout.php`: Logout logic to end user sessions
