@@ -1,5 +1,5 @@
 # Healthcare Management System
-
+![Image](https://github.com/user-attachments/assets/43cda619-6dd6-4a3e-8eca-eaebdf018ef7)
 ## Description
 
 The Healthcare Management System is a web-based application designed to simplify and streamline appointment scheduling, prescription management, and administrative oversight for a healthcare facility. This project allows different types of Admins , Doctors, and Patients (Users) — to interact with the system based on their roles. 
